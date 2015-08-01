@@ -19,6 +19,7 @@ For LED L:  |----+----|
 
 */
 
+int timer = 500; // The higher the number, the slower the timing.
 
 void setup() {
   // put your setup code here, to run once:
@@ -30,25 +31,24 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   digitalWrite(2, HIGH);
-  delay(500);
+  delay(timer);
   digitalWrite(2, LOW);
 
   digitalWrite(3, HIGH);
-  delay(500);
+  delay(timer);
   digitalWrite(3, LOW);
 //
   digitalWrite(4, HIGH);
-  delay(500);
+  delay(timer);
   digitalWrite(4, LOW);
 
   ////////////////////
 
   digitalWrite(4, HIGH);
-  delay(500);
+  delay(timer);
   digitalWrite(4, LOW);
 
   digitalWrite(3, HIGH);
-  delay(500);
+  delay(timer);
   digitalWrite(3, LOW);
-
 }
