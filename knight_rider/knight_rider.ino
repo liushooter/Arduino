@@ -28,25 +28,17 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(2, HIGH);
-  delay(timer);
-  digitalWrite(2, LOW);
-
-  digitalWrite(3, HIGH);
-  delay(timer);
-  digitalWrite(3, LOW);
-//
-  digitalWrite(4, HIGH);
-  delay(timer);
-  digitalWrite(4, LOW);
+  for(int pin = 2; pin < 5; pin++){
+    digitalWrite(pin, HIGH);
+    delay(timer);
+    digitalWrite(pin, LOW);
+  }
 
   ////////////////////
+  for(int pin = 4; pin > 1; pin--){
+    digitalWrite(pin, HIGH);
+    delay(timer);
+    digitalWrite(pin, LOW);
+  }
 
-  digitalWrite(4, HIGH);
-  delay(timer);
-  digitalWrite(4, LOW);
-
-  digitalWrite(3, HIGH);
-  delay(timer);
-  digitalWrite(3, LOW);
 }
