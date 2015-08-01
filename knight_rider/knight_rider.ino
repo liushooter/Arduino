@@ -22,14 +22,12 @@ For LED L:  |----+----|
 int timer = 500; // The higher the number, the slower the timing.
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(4, OUTPUT);
+  for(int pin = 2; pin < 5; pin++){
+    pinMode(pin, OUTPUT);
+  }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   digitalWrite(2, HIGH);
   delay(timer);
   digitalWrite(2, LOW);
